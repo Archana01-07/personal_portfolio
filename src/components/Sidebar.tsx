@@ -38,7 +38,6 @@ const navOptions = [
   { label: 'Projects', link: '#projects', icon: Briefcase },
   { label: 'Experience', link: '#experience', icon: FileText },
   { label: 'Tech Stack & Tools', link: '#techstack', icon: Cpu },
-  { label: 'Coding Profiles', link: '#coding', icon: Code }, // Add this
   { label: 'Achievements & Certifications', link: '#achievements', icon: Award },
   { label: 'Contact', link: '#contact', icon: Mail },
 ];
