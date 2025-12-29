@@ -10,7 +10,7 @@ export const App = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Archana_Srinivasan_Resume.pdf';
+    link.download = '/ARCHANA_SRINIVASAN.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -561,7 +561,7 @@ JavaScript.
           Interested in collaborating or have questions? Feel free to reach out!
         </p>
         <div className="flex flex-wrap gap-4">
-          <Button size="lg" onClick={() => window.location.href = 'mailto:your.email@example.com'}>
+          <Button size="lg" onClick={() => window.location.href = 'mailto:sr.archana01@gmail.com'}>
             Send Email
           </Button>
           <Button variant="outline" size="lg" onClick={handleDownloadResume}>
