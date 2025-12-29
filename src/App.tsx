@@ -9,8 +9,8 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 export const App = () => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
-    link.download = '/ARCHANA_SRINIVASAN.pdf';
+    link.href = '/ARCHANA_SRINIVASAN.pdf';
+    link.download = 'Archana_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
