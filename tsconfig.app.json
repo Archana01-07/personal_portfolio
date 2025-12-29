@@ -23,13 +23,14 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-        "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
 
+    /* Path Configuration - CORRECT WAY */
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    /* Add this to silence baseUrl deprecation warning */
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src"]
 }
