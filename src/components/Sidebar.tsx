@@ -15,7 +15,6 @@ import {
   Cpu,
   Award,
   Mail,
-  Code
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
