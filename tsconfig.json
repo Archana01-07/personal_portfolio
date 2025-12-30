@@ -1,3 +1,43 @@
+// {
+//   "files": [],
+//   "references": [
+//     {
+//       "path": "./tsconfig.app.json"
+//     },
+//     {
+//       "path": "./tsconfig.node.json"
+//     }
+//   ]
+//   /* REMOVE the compilerOptions section completely */
+// }
+
+// {
+//   "files": [],
+//   "references": [
+//     {
+//       "path": "./tsconfig.app.json"
+//     },
+//     {
+//       "path": "./tsconfig.node.json"
+//     }
+//   ]
+//   /* REMOVE THIS ENTIRE compilerOptions SECTION - 
+//      It's already defined in tsconfig.app.json */
+// }
+
+// {
+//   "files": [],
+//   "references": [
+//     {
+//       "path": "./tsconfig.app.json"
+//     },
+//     {
+//       "path": "./tsconfig.node.json"
+//     }
+//   ]
+//   /* REMOVE the compilerOptions section completely */
+// }
+
 {
   "files": [],
   "references": [
@@ -7,6 +47,12 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
-  /* REMOVE the compilerOptions section completely */
+  ],
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0", // Add this line
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
 }

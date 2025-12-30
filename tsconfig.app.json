@@ -1,3 +1,81 @@
+// {
+//   "compilerOptions": {
+//     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+//     "target": "ES2022",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "types": ["vite/client"],
+//     "skipLibCheck": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "verbatimModuleSyntax": true,
+//     "moduleDetection": "force",
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "erasableSyntaxOnly": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "noUncheckedSideEffectImports": true,
+
+//     /* Path Configuration - CORRECT WAY */
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     },
+
+//     /* Add this to silence baseUrl deprecation warning */
+//     "ignoreDeprecations": "6.0"
+//   },
+//   "include": ["src"]
+// }
+
+
+
+// {
+//   "compilerOptions": {
+//     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+//     "target": "ES2022",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "types": ["vite/client"],
+//     "skipLibCheck": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "verbatimModuleSyntax": true,
+//     "moduleDetection": "force",
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "erasableSyntaxOnly": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "noUncheckedSideEffectImports": true,
+    
+//     /* Path Configuration - UPDATED */
+//     "base": ".",                     // ← CHANGED from "baseUrl" to "base"
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     },
+
+//     /* Add this to silence deprecation warning */
+//     "ignoreDeprecations": "6.0"      // ← ADD THIS LINE
+//   },
+//   "include": ["src"]
+// }
+
+
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
@@ -23,14 +101,15 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-
-    /* Path Configuration - CORRECT WAY */
+    
+    /* Path mapping - fixed deprecation */
+    "ignoreDeprecations": "6.0", // Add this line
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    },
-
-    /* Add this to silence baseUrl deprecation warning */
-    "ignoreDeprecations": "6.0"
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": ["src"]
 }
