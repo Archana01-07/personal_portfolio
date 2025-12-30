@@ -23,12 +23,27 @@
 //   },
 // });
 
+// import path from "path"
+// import tailwindcss from "@tailwindcss/vite"
+// import react from "@vitejs/plugin-react"
+// import { defineConfig } from "vite"
+
+// // https://vite.dev/config/
+// export default defineConfig({
+//   plugins: [react(), tailwindcss()],
+//   resolve: {
+//     alias: {
+//       "@": path.resolve(__dirname, "./src"),
+//     },
+//   },
+  
+// })
+
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -36,5 +51,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
+  // Add these for Vercel
+  base: "./",  // Changed from "/" to "./"
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html")
+      }
+    }
+  },
+  // For better error messages
+  server: {
+    port: 5173,
+    host: true
+  }
 })

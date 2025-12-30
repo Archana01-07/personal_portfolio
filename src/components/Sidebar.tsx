@@ -24,7 +24,7 @@ export const Sidebar = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/ARCHANA_SRINIVASAN.pdf';
     link.download = 'Archana_Srinivasan_Resume.pdf';
     document.body.appendChild(link);
     link.click();
